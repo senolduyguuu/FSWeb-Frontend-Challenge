@@ -1,11 +1,11 @@
 import './App.css'
 
 function App() {
-
-
 	return (
 		<>
-			<p>deneme</p>
+			<h1 className="text-3xl font-bold">
+				Hello world!
+			</h1>
 		</>
 	)
 }

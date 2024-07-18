@@ -42,12 +42,11 @@ const ProjectsContent = () => {
 							{project.description}
 						</p>
 						<ProjectBtn />
+						<ProjectsLink />
 					</div>
 				))}
 			</div>
-			<div className="mt-8">
-				<ProjectsLink />
-			</div>
+
 		</div>
 	);
 }

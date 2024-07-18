@@ -3,6 +3,7 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleDarkMode } from '../../features/darkModeSlice';
 import { useLanguage } from '../../hook/context/LanguageContext';
+
 const DarkModeToggle = () => {
 	const { t } = useLanguage();
 
@@ -10,17 +11,24 @@ const DarkModeToggle = () => {
 	const dispatch = useDispatch();
 
 	const handleToggle = () => {
-
 		dispatch(toggleDarkMode());
 	};
 
 	React.useEffect(() => {
+		localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
 		if (isDarkMode) {
 			document.body.classList.add('dark');
 		} else {
 			document.body.classList.remove('dark');
 		}
 	}, [isDarkMode]);
+
+	React.useEffect(() => {
+		const storedDarkMode = localStorage.getItem('darkMode');
+		if (storedDarkMode) {
+			dispatch(toggleDarkMode(JSON.parse(storedDarkMode)));
+		}
+	}, [dispatch]);
 
 	return (
 		<label htmlFor="dark-toggle" className="flex items-center cursor-pointer">

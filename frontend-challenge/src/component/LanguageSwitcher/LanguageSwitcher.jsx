@@ -1,10 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import React from 'react';
 import { useLanguage } from '../../hook/context/LanguageContext';
 
 const LanguageSwitcher = () => {
-	// eslint-disable-next-line no-unused-vars
 	const { t, changeLanguage, currentLanguage } = useLanguage();
+
+	const handleLanguageChange = (language) => {
+		changeLanguage(language);
+		localStorage.setItem('currentLanguage', language);
+	};
+
+	React.useEffect(() => {
+		const storedLanguage = localStorage.getItem('currentLanguage');
+		if (storedLanguage) {
+			changeLanguage(storedLanguage);
+		}
+	}, [changeLanguage]);
 
 	return (
 		<>
@@ -14,7 +26,7 @@ const LanguageSwitcher = () => {
 					href="#"
 					onClick={(e) => {
 						e.preventDefault();
-						changeLanguage('en');  // İngilizceye geçiş
+						handleLanguageChange('en');
 					}}
 					className="text-darkModeBackground font-bold text-[15px] leading-[1.134rem] tracking-[.25em]"
 				>
@@ -25,14 +37,13 @@ const LanguageSwitcher = () => {
 					href="#"
 					onClick={(e) => {
 						e.preventDefault();
-						changeLanguage('tr');  // Türkçeye geçiş
+						handleLanguageChange('tr');
 					}}
 					className="text-darkModeBackground font-bold text-[15px] leading-[1.134rem] tracking-[.25em]"
 				>
 					TÜRKÇE <span className="text-darkModeText">'YE GEÇ</span>
 				</a>
 			)}
-			{/* <p>{t('welcome_message')}</p> */}
 		</>
 	);
 };

@@ -4,6 +4,7 @@ import React from 'react';
 import { useLanguage } from '../../hook/context/LanguageContext';
 
 const LanguageSwitcher = () => {
+	// eslint-disable-next-line no-unused-vars
 	const { t, changeLanguage, currentLanguage } = useLanguage();
 
 	const handleLanguageChange = (language) => {

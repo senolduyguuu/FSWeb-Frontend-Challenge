@@ -2,7 +2,7 @@ import Navbar from "../../component/Navbar/Navbar"
 
 const Header = () => {
 	return (
-		<header>
+		<header className="mt-10">
 			<Navbar></Navbar>
 		</header>
 	)

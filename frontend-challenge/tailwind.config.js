@@ -17,7 +17,8 @@ export default {
 				SkilsText: colors.SkilsText,
 				ProfileColor: colors.ProfileColor,
 				FooterColor: colors.FooterColor,
-				DarkModeBodyColor: colors.DarkModeBodyColor
+				DarkModeBodyColor: colors.DarkModeBodyColor,
+				HeaderColor: colors.HeaderColor
 
 			},
 		},

@@ -12,14 +12,14 @@ const ProfileContent = () => {
 
 	return (
 		<div>
-			<h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-SkilsText mb-6">
+			<h2 className="text-2xl md:text-[1.875rem] lg:text-[1.875rem] font-medium text-SkilsText mb-6">
 				{t("profile_section")}
 			</h2>
 			<div className="space-y-4">
 				{profileData.map((item, index) => (
 					<div key={index} className="flex flex-col md:flex-row md:space-x-4">
-						<p className="text-lg font-semibold text-gray-900 dark:text-white">{item.label}:</p>
-						<p className="text-lg font-normal text-gray-600 dark:text-gray-300">{item.value}</p>
+						<p className="text-lg font-semibold text-[ #000000] ">{item.label}:</p>
+						<p className="text-lg font-normal text-[ #000000]">{item.value}</p>
 					</div>
 				))}
 			</div>

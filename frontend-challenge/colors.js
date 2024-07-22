@@ -7,7 +7,8 @@ const colors = {
 	SkilsText: ' #4338CA',
 	ProfileColor: '#1F2937',
 	FooterColor: "#f9f9f9",
-	DarkModeBodyColor: "#252128"
+	DarkModeBodyColor: "#252128",
+	HeaderColor: " #1F2937"
 }
 
 export default colors;

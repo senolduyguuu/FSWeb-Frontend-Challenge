@@ -2,7 +2,7 @@ const buttons = ["react", "redux", "axios"];
 
 const ProjectBtn = () => {
 	return (
-		<div className="flex space-x-4">
+		<div className="flex space-x-4 justify-start">
 			{buttons.map((button, index) => (
 				<button
 					key={index}

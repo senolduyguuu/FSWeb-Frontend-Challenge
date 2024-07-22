@@ -27,18 +27,27 @@ const ProjectsContent = () => {
 	];
 
 	return (
-		<div className="p-4 md:p-8 lg:p-6">
-			<div className="mb-8 ">
-				<p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 dark:text-white">
+		<div className="mt-12">
+			<div className="mb-8">
+				<p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-HeaderColor">
 					{t("projects_section")}
 				</p>
 			</div>
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 				{projects.map((project, index) => (
-					<div key={index} className="flex flex-col items-center space-y-4 p-4  dark:bg-gray-800  rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-						<img src={project.img} alt={project.title} className="w-full h-40 object-cover rounded-md" />
-						<h2 className="text-xl md:text-2xl lg:text-3xl text-gray-900 dark:text-white font-semibold">{project.title}</h2>
-						<p className="text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-300 text-center">
+					<div
+						key={index}
+						className="flex flex-col  space-y-4 p-4 dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+					>
+						<img
+							src={project.img}
+							alt={project.title}
+							className="w-full h-40 object-cover rounded-md"
+						/>
+						<h2 className="text-xl md:text-2xl lg:text-3xl text-SkilsText font-semibold w-full text-left">
+							{project.title}
+						</h2>
+						<p className="lg:text-[0.875rem] text-gray-600 dark:text-gray-300 text-left">
 							{project.description}
 						</p>
 						<ProjectBtn />
@@ -46,9 +55,8 @@ const ProjectsContent = () => {
 					</div>
 				))}
 			</div>
-
 		</div>
 	);
-}
+};
 
 export default ProjectsContent;

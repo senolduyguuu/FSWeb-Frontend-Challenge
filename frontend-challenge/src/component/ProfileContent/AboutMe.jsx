@@ -4,7 +4,7 @@ const AboutMe = () => {
 	const { t } = useLanguage();
 	return (
 		<div>
-			<h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-SkilsText mb-6">
+			<h2 className="text-2xl md:text-[1.875rem] lg:text-[1.875rem] font-medium text-SkilsText mb-6">
 				{t("about_me")}
 			</h2>
 			<div className="space-y-4">

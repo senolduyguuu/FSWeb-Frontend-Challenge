@@ -1,6 +1,11 @@
 body.dark {
-  background-color: #121212; /* Karanlık mod arka plan rengi */
-  color: #ffffff; /* Karanlık mod metin rengi */
+  background-color: #252128;
 }
 
-/* Diğer karanlık mod stilleri burada tanımlanabilir */
+body.dark .deneme {
+  background-color: black;
+}
+
+body.dark * {
+  color: #ffffff;
+}

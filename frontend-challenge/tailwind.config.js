@@ -16,7 +16,8 @@ export default {
 				navText: colors.navText,
 				SkilsText: colors.SkilsText,
 				ProfileColor: colors.ProfileColor,
-				FooterColor: colors.FooterColor
+				FooterColor: colors.FooterColor,
+				DarkModeBodyColor: colors.DarkModeBodyColor
 
 			},
 		},

@@ -35,7 +35,7 @@ const ProjectsContent = () => {
 			</div>
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 				{projects.map((project, index) => (
-					<div key={index} className="flex flex-col items-center space-y-4 p-4 bg-white dark:bg-gray-800 border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+					<div key={index} className="flex flex-col items-center space-y-4 p-4  dark:bg-gray-800  rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
 						<img src={project.img} alt={project.title} className="w-full h-40 object-cover rounded-md" />
 						<h2 className="text-xl md:text-2xl lg:text-3xl text-gray-900 dark:text-white font-semibold">{project.title}</h2>
 						<p className="text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-300 text-center">

@@ -6,8 +6,12 @@ const darkModeSlice = createSlice({
 		isDarkMode: false,
 	},
 	reducers: {
-		toggleDarkMode: (state) => {
-			state.isDarkMode = !state.isDarkMode;
+		toggleDarkMode: (state, action) => {
+			if (action.payload !== undefined) {
+				state.isDarkMode = action.payload;
+			} else {
+				state.isDarkMode = !state.isDarkMode;
+			}
 		},
 	},
 });

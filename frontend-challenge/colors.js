@@ -6,8 +6,8 @@ const colors = {
 	navText: '#3730A3',
 	SkilsText: ' #4338CA',
 	ProfileColor: '#1F2937',
-	FooterColor: "#f9f9f9"
-
+	FooterColor: "#f9f9f9",
+	DarkModeBodyColor: "#252128"
 }
 
 export default colors;

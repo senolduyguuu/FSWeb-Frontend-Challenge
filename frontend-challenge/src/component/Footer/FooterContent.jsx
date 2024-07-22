@@ -1,11 +1,12 @@
 import FooterImg from "../../assets/Footer/👉.png";
 import { useLanguage } from '../../hook/context/LanguageContext';
+import "../.../../../App.css"
 
 const FooterContent = () => {
 	const { t } = useLanguage();
 
 	return (
-		<footer className="bg-FooterColor py-12">
+		<footer className=" deneme py-12">
 			<div className="container mx-auto px-4 md:px-8 lg:px-12 text-center md:text-left">
 				<h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
 					{t("footer_title")}

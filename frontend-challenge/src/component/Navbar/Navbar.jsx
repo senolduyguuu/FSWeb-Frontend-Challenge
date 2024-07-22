@@ -28,7 +28,7 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<nav className="bg-white dark:bg-gray-900 shadow-md">
+		<nav className="dark:bg-gray-900 shadow-md">
 			<div className="container mx-auto px-4 lg:max-w-5xl xl:max-w-6xl py-4 flex items-center justify-between">
 				<div className="flex items-center">
 					<img src={logo} alt="logo" className="h-8 w-auto" />

@@ -6,12 +6,10 @@ const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <App />,
-		children: [
-			{
-				path: 'form-page',
-				element: <FormPage />,
-			},
-		],
+	},
+	{
+		path: '/form-page',
+		element: <FormPage />,
 	},
 ]);
 

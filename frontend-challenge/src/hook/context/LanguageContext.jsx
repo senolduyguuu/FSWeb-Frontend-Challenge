@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const LanguageContext = createContext();
@@ -11,12 +11,11 @@ export const LanguageProvider = ({ children }) => {
 	const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
 	const changeLanguage = async (language) => {
-		await i18n.changeLanguage(language);
-		setCurrentLanguage(language);  // Context’teki dili güncelle
+		if (language !== currentLanguage) {
+			await i18n.changeLanguage(language);
+			setCurrentLanguage(language);
+		}
 	};
-
-	useEffect(() => {
-	}, [i18n.language]);
 
 	return (
 		<LanguageContext.Provider value={{ t, currentLanguage, changeLanguage, availableLanguages: ['en', 'tr'] }}>

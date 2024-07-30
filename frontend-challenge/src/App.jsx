@@ -1,4 +1,3 @@
-// import { Outlet } from 'react-router-dom'
 import './App.css'
 import Footer from './layout/Footer/Footer'
 import Header from './layout/Header/Header'
@@ -21,8 +20,6 @@ function App() {
 					<Skils></Skils>
 					<Profile></Profile>
 					<Projects></Projects>
-
-					{/* <Outlet></Outlet> */}
 				</div>
 				<Footer></Footer>
 			</div>

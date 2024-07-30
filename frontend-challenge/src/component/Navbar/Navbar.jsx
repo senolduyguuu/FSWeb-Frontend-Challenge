@@ -36,7 +36,7 @@ const Navbar = () => {
 				<div className="hidden md:flex md:space-x-12">
 					<Link to="/skills" className="text-navTextColor text-lg leading-7 font-medium hover:text-indigo-600">{t("skills")}</Link>
 					<Link to="/projects" className="text-navTextColor text-lg leading-7 font-medium hover:text-indigo-600">{t("projects")}</Link>
-					<Link to="form-page">
+					<Link to="/form-page">
 						<button className="font-medium text-md text-navText border-2 border-indigo-600 py-2 px-4 rounded-md hover:bg-indigo-600 hover:text-white">
 							{t("hire_me_button")}
 						</button>

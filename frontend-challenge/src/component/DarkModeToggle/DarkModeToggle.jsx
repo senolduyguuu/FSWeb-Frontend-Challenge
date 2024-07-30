@@ -41,13 +41,17 @@ const DarkModeToggle = () => {
 					onChange={handleToggle}
 				/>
 				<div className="block bg-darkModeBackground w-14 h-8 rounded-full"></div>
-				<div className={`dot absolute left-1 top-1 bg-darkModeEllipse w-6 h-6 rounded-full transition transform ${isDarkMode ? 'translate-x-full' : ''}`}>
-					{isDarkMode ? <FaMoon className="text-white" /> : <FaSun className="text-yellow-500" />}
-				</div>
+				{isDarkMode ? <div className={`dot absolute left-1 top-1 bg-transparent w-6 h-6 rounded-full transition transform ${isDarkMode ? 'translate-x-full' : ''}`}>
+					{isDarkMode ? <FaMoon className="text-transparent	" /> : <FaSun className="text-yellow-500" />}
+				</div> : <div className={`dot absolute left-1 top-1 bg-darkModeEllipse w-6 h-6 rounded-full transition transform ${isDarkMode ? 'translate-x-full' : ''}`}>
+					{isDarkMode ? <FaMoon className="text-transparent	" /> : <FaSun className="text-yellow-500" />}
+				</div>}
+
 			</div>
-			<span className="ml-3 text-darkModeText font-bold text-[15px] leading-[1.134rem] tracking-[.25em]">
-				{t("DARK_MODE")}
-			</span>
+			{isDarkMode ? <span className="ml-3 text-darkModeText font-bold text-[15px] leading-[1.134rem] tracking-[.25em]">
+				{t("LIGHT_MODE")}
+			</span> : <span className="ml-3 text-darkModeText font-bold text-[15px] leading-[1.134rem] tracking-[.25em]">{t("DARK_MODE")}</span>}
+
 		</label>
 	);
 };
